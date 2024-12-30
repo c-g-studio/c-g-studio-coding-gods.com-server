@@ -3,11 +3,15 @@ import {defineCliConfig} from 'sanity/cli'
 export default defineCliConfig({
   api: {
     projectId: 'xqcma0kg',
-    dataset: 'production'
+    dataset: 'production',
   },
-  /**
-   * Enable auto-updates for studios.
-   * Learn more at https://www.sanity.io/docs/cli#auto-updates
-   */
+  graphql: [
+    {
+      playground: true,
+      tag: 'production',
+      workspace: 'default',
+      id: 'xqcma0kg',
+    },
+  ],
   autoUpdates: true,
 })
