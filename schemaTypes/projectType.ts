@@ -66,5 +66,10 @@ export const projectType = defineType({
         },
       ],
     }),
+    defineField({
+      name: 'link',
+      title: 'Link',
+      type: 'string'
+    }),
   ],
 });

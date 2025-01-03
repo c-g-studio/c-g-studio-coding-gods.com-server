@@ -15,16 +15,16 @@ export const category = defineType({
       name: 'categoryIdentifier',
       title: 'Category identifier',
       type: 'string',
-      validation: (Rule) => Rule.required(), // Убедитесь, что значение обязательно
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {
     select: {
-      title: 'categoryIdentifier', // Выбираем поле, которое будет отображаться
+      title: 'categoryIdentifier',
     },
     prepare(selection) {
       return {
-        title: selection.title || 'No Identifier', // Показываем значение или сообщение по умолчанию
+        title: selection.title || 'No Identifier',
       };
     },
   },
