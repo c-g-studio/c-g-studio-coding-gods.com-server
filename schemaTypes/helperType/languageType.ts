@@ -1,5 +1,5 @@
 import {defineType} from 'sanity'
-import {EN, UK, RU} from '../constants/languages'
+import {EN, UK, RU} from '../../constants/languages'
 
 
 export const languageType = defineType({
