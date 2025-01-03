@@ -1,6 +1,6 @@
 import {projectType} from './projectType'
 import {languageType} from './helperType/languageType'
-import {multilingualBlock} from './helperType/descriptionMultilingualBlock'
+import {multilingualBlock} from './helperType/multilingualBlock'
 import {imageFormatType} from './helperType/imageFormatType'
 import {iconsType} from './iconsType'
 import {largeImageFormatType} from './helperType/largeImageFomatType'
