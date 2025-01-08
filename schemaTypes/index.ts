@@ -5,5 +5,6 @@ import {imageFormatType} from './helperType/imageFormatType'
 import {iconsType} from './iconsType'
 import {largeImageFormatType} from './helperType/largeImageFomatType'
 import {category} from './category'
+import {reviewsType} from "./reviewsType";
 
-export const schemaTypes = [projectType, languageType, multilingualBlock, imageFormatType, largeImageFormatType,iconsType, category]
+export const schemaTypes = [projectType, languageType, multilingualBlock, imageFormatType, largeImageFormatType,iconsType, category, reviewsType]
