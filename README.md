@@ -1,4 +1,19 @@
 # 🚀 Getting started with Strapi
+Usage URL
+GET
+https://c-g-studio-coding-gods-com-server.onrender.com/api/projects
+https://c-g-studio-coding-gods-com-server.onrender.com/api/technologies
+https://c-g-studio-coding-gods-com-server.onrender.com/api/categories
+https://c-g-studio-coding-gods-com-server.onrender.com/api/reviews
+
+POST
+https://c-g-studio-coding-gods-com-server.onrender.com/api/order-requests
+body
+{
+    "name": "qweqw",
+    "email":"qwe@wqwe.com",
+    "phone":"56513135418431"
+}
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
