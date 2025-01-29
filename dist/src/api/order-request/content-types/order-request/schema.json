@@ -1,0 +1,27 @@
+{
+    "kind": "collectionType",
+    "collectionName": "order_requests",
+    "info": {
+        "singularName": "order-request",
+        "pluralName": "order-requests",
+        "displayName": "Order-request"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "string",
+            "required": true
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

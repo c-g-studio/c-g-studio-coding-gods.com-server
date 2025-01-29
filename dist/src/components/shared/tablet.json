@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_tablets",
+    "info": {
+        "displayName": "tablet"
+    },
+    "options": {},
+    "attributes": {
+        "tablet": {
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ],
+            "type": "media",
+            "multiple": true
+        }
+    }
+}

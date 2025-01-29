@@ -1,0 +1,25 @@
+{
+    "kind": "collectionType",
+    "collectionName": "technologies",
+    "info": {
+        "singularName": "technology",
+        "pluralName": "technologies",
+        "displayName": "Technology",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "project": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::project.project",
+            "inversedBy": "technologies"
+        }
+    }
+}
