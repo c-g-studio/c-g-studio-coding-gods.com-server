@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_mobiles",
+  "info": {
+    "displayName": "mobile"
+  },
+  "options": {},
+  "attributes": {
+    "mobile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
