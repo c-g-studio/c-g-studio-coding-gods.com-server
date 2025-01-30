@@ -1,19 +1,16 @@
-import axios from "axios";
+import "dotenv/config";
+import TelegramBot from "node-telegram-bot-api";
+const { TG_BOT_TOKEN, TG_CHAT_ID } = process.env;
 
 type MessageParams = {
   telegramMessage: string;
-  to: string;
-  token: string;
 };
+const bot = new TelegramBot(TG_BOT_TOKEN, { polling: true });
+
 export const sendMessageToTelegram = async ({
   telegramMessage,
-  to,
-  token,
 }: MessageParams): Promise<void> => {
-  // Логика отправки сообщения
-  await axios.post(`https://api.telegram.org/bot${token}/sendMessage`, {
-    chat_id: to,
-    text: telegramMessage,
+  await bot.sendMessage(TG_CHAT_ID, telegramMessage, {
     parse_mode: "HTML",
   });
 };

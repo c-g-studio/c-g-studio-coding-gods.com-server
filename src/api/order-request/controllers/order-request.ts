@@ -3,14 +3,12 @@ import "dotenv/config";
 import { sendEmail } from "../../../utils/sendMail";
 import { sendMessageToTelegram } from "../../../utils/sendMessageToTelegram";
 
-const { FLAG_MAIL, TG_FLAG, TG_CHAT_ID, TG_BOT_TOKEN } = process.env;
+const { FLAG_MAIL, TG_FLAG } = process.env;
 
 export default factories.createCoreController(
   "api::order-request.order-request",
   () => ({
     async create(ctx) {
-      console.log(ctx.request.body);
-
       const { name, email, phone } = ctx.request.body || {};
       ctx.request.body = {
         data: { name, email, phone },
@@ -47,8 +45,6 @@ export default factories.createCoreController(
       `;
           await sendMessageToTelegram({
             telegramMessage,
-            to: TG_CHAT_ID,
-            token: TG_BOT_TOKEN,
           });
         } catch (error) {
           ctx.throw(500, "Error sending: " + error.message);

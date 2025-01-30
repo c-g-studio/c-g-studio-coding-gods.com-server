@@ -4,10 +4,9 @@ const strapi_1 = require("@strapi/strapi");
 require("dotenv/config");
 const sendMail_1 = require("../../../utils/sendMail");
 const sendMessageToTelegram_1 = require("../../../utils/sendMessageToTelegram");
-const { FLAG_MAIL, TG_FLAG, TG_CHAT_ID, TG_BOT_TOKEN } = process.env;
+const { FLAG_MAIL, TG_FLAG } = process.env;
 exports.default = strapi_1.factories.createCoreController("api::order-request.order-request", () => ({
     async create(ctx) {
-        console.log(ctx.request.body);
         const { name, email, phone } = ctx.request.body || {};
         ctx.request.body = {
             data: { name, email, phone },
@@ -42,8 +41,6 @@ exports.default = strapi_1.factories.createCoreController("api::order-request.or
       `;
                 await (0, sendMessageToTelegram_1.sendMessageToTelegram)({
                     telegramMessage,
-                    to: TG_CHAT_ID,
-                    token: TG_BOT_TOKEN,
                 });
             }
             catch (error) {
