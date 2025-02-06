@@ -4,7 +4,8 @@
     "info": {
         "singularName": "review",
         "pluralName": "reviews",
-        "displayName": "Review"
+        "displayName": "Review",
+        "description": ""
     },
     "options": {
         "draftAndPublish": true
@@ -14,21 +15,32 @@
         "name": {
             "type": "string"
         },
-        "source": {
+        "description": {
             "type": "blocks"
         },
         "link": {
             "type": "string"
         },
         "avatar": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
             "allowedTypes": [
                 "images",
                 "files",
                 "videos",
                 "audios"
-            ],
-            "type": "media",
-            "multiple": true
+            ]
+        },
+        "source": {
+            "type": "enumeration",
+            "enum": [
+                "google",
+                "instagram",
+                "facebook",
+                "twitter",
+                "linkedin"
+            ]
         }
     }
 }
